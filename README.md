@@ -43,3 +43,15 @@ protected void onCreate(Bundle savedInstanceState) {
  - Once you have created the Location Services client you can get the last known location of a user's device. 
  - getLastLocation() method - to retrieve the device location. It returns a Task that you can use to get a Location object with the latitude and longitude coordinates of a geographic location.
  - The location object may be null in the following situations - location is turned off in the device settings, device never recorded its location, and Google Play services on the device has restarted.
+
+## Choose the best location estimate
+
+The `FusedLocationProviderClient` provides many ways to get the device location data,as the following:
+
+1. getLastLocation() :it get the location quickly and minimize the battery usage ,but the location might be out of date if we don't use this information fast.
+
+2. getCurrentLocation() :it get updated and give accurate location but it still do computation on the device. this way is the best to get a fresh location ,and safer than using `requestLocationUpdates()`.
+
+## Resources used in this reading
+
+1. [Get the last location](https://developer.android.com/training/location/retrieve-current)
