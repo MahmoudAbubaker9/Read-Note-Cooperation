@@ -37,3 +37,9 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 
 ```
+
+
+## Get the last known location
+ - Once you have created the Location Services client you can get the last known location of a user's device. 
+ - getLastLocation() method - to retrieve the device location. It returns a Task that you can use to get a Location object with the latitude and longitude coordinates of a geographic location.
+ - The location object may be null in the following situations - location is turned off in the device settings, device never recorded its location, and Google Play services on the device has restarted.
